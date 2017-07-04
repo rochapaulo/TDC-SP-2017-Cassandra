@@ -33,8 +33,8 @@ create table if not exists tdc.talk (
 	date timestamp,
 	keywords list<text>,
 	track_name text,
-	primary key (id)
-) with clustering order by (date desc, name asc);
+	primary key (id, date, name, track_name)
+) with clustering order by (date desc, name asc, track_name asc);
 
 
 create table if not exists tdc.talk_by_keyword(
