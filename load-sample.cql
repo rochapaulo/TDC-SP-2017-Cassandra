@@ -89,7 +89,7 @@ apply batch;
 
 
 begin batch
-	insert into tdc.talk (id, date, description, keywords, name, speakers_id, speakers_name)
+	insert into tdc.talk (id, date, description, keywords, name, speakers_id, speakers_name, track_name)
 	values (
 		ca5fc062-0642-46dc-a375-c3924d69da2c,
 		1500555630000,
@@ -97,7 +97,8 @@ begin batch
 		['TDD', 'Test'],
 		'TDD in Action - A Pratical Guide', 
 		[0d1591d5-1c71-4516-b2e0-379b3bd5907f],
-		['Evandro Zeferino']);
+		['Evandro Zeferino'],
+	        'DevTest');
 		
 	insert into tdc.talk_by_keyword (keyword, date, talk_id, talk_name)
 	values ('TDD', 1500555630000, ca5fc062-0642-46dc-a375-c3924d69da2c, 'TDD in Action - A Pratical Guide');
@@ -111,7 +112,7 @@ begin batch
 apply batch;
 
 begin batch
-	insert into tdc.talk (id, date, description, keywords, name, speakers_id, speakers_name)
+	insert into tdc.talk (id, date, description, keywords, name, speakers_id, speakers_name, track_name)
 	values (
 		85e7c396-fb5b-4f31-8061-1f7dab3ff8fc,
 		1500469200000,
@@ -119,7 +120,8 @@ begin batch
 		['Cassandra', 'NoSQL', 'Performance', 'DB'],
 		'Why the relational thinking will destroy your system performance?', 
 		[bd0514e3-dad9-493f-868d-6deee6abdbb6],
-		['Paulo Almeida']);
+		['Paulo Almeida'],
+	        'NoSQL');
 		
 	insert into tdc.talk_by_keyword (keyword, date, talk_id, talk_name)
 	values ('Cassandra', 1500469200000, 85e7c396-fb5b-4f31-8061-1f7dab3ff8fc, 'Why the relational thinking will destroy your system performance?');
@@ -139,7 +141,7 @@ begin batch
 apply batch;
 
 begin batch
-	insert into tdc.talk (id, date, description, keywords, name, speakers_id, speakers_name)
+	insert into tdc.talk (id, date, description, keywords, name, speakers_id, speakers_name, track_name)
 	values (
 		1318ade9-c912-40f8-a5c0-7bc46e1b6754,
 		1508418000000,
@@ -147,7 +149,8 @@ begin batch
 		['TDD', 'Test'],
 		'jUnit Advanced Features', 
 		[be8e0b1b-571a-47db-b935-bf78302115f6, 6217ce21-6a21-4111-9308-29a4b61d3d97],
-		['Marcos', 'Dineide']);
+		['Marcos', 'Dineide'],
+	        'Test');
 		
 	insert into tdc.talk_by_keyword (keyword, date, talk_id, talk_name)
 	values ('TDD', 1508418000000, 1318ade9-c912-40f8-a5c0-7bc46e1b6754, 'jUnit Advanced Features');
