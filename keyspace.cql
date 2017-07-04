@@ -13,7 +13,6 @@ create table if not exists tdc.speaker (
 create table if not exists tdc.speaker_by_name (
 	speaker_id uuid,
 	name text,
-	bio text,
 	primary key (name, speaker_id)
 );
 
@@ -22,7 +21,7 @@ create table if not exists tdc.speaker_by_state (
 	name text,
 	state text,
 	bio text,
-	primary key (state, name, speaker_id)
+	primary key (state, city, name, speaker_id)
 );
 
 create table if not exists tdc.talk (
