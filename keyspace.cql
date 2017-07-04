@@ -24,7 +24,7 @@ create table if not exists tdc.speaker_by_state (
 	primary key (state, city, name, speaker_id)
 ) with clustering order by (city asc, name asc);
 
-create table if not exists tdc.talk (
+create table if not exists tdc.talk(
 	id uuid,
 	name text,
 	description text,
@@ -35,7 +35,6 @@ create table if not exists tdc.talk (
 	track_name text,
 	primary key (id, date, name, track_name)
 ) with clustering order by (date desc, name asc, track_name asc);
-
 
 create table if not exists tdc.talk_by_keyword(
 	talk_id uuid,
@@ -52,5 +51,6 @@ create table if not exists tdc.talk_by_speaker_name(
 	date timestamp,
 	primary key (speaker_name, date, talk_id)
 ) with clustering order by (date desc);
+
 
 create index talk_by_track_name on tdc.talk(track_name)
