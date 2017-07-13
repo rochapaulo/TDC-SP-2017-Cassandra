@@ -20,6 +20,7 @@ create table if not exists tdc.speaker_by_state (
 	speaker_id uuid,
 	name text,
 	state text,
+	city text,
 	bio text,
 	primary key (state, city, name, speaker_id)
 ) with clustering order by (city asc, name asc);
